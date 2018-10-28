@@ -1,0 +1,132 @@
+.calendare {
+  position: relative;
+}
+
+.btn-arrow {
+  width: 50px;
+  height: 25px;
+
+  font-size: 0;
+
+  border: none;
+  background: none;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.btn-arrow--left {
+  background-image: url("../img/left-pointing-arrow.png");
+}
+
+.btn-arrow--right {
+  background-image: url("../img/right-pointing-arrow.png");
+}
+
+.month {
+  height: 200px;
+
+  padding: 0 4em;
+}
+
+.month__row {
+  width: 18px;
+
+  text-align: center;
+
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+}
+
+.month__row span {
+  cursor: pointer;
+}
+
+.month__row:first-child,
+.month__row:last-child {
+  color: red;
+}
+
+.days-of-week {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.disabled {
+  visibility: hidden;
+}
+
+.test {
+  background-color: aquamarine;
+}
+
+.popup {
+  position: absolute;
+
+  width: 150px;
+
+  background-color: white;
+  border-radius: 2px;
+}
+
+.popup--show {
+  display: block;
+}
+
+.popup__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content: space-between;
+
+  padding: 10px;
+
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+
+}
+
+.popup__btns button {
+  position: relative;
+
+  text-align: left;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.popup__btns button::after {
+  position: absolute;
+  content: "";
+
+  width: 15px;
+  height: 15px;
+
+  top: 5px;
+  right: 0;
+
+  border: 1px solid black;
+}
+
+.popup__btns button:nth-child(1)::after {
+  background-color: rgba(215, 125, 44, 0.4);
+}
+
+.popup__btns button:nth-child(2)::after {
+  background-color: rgba(66, 124, 44, 0.4);
+}
+
+.popup__btns button:nth-child(3)::after {
+  background-color: rgba(66, 124, 255, 0.4);
+}
+
+.popup__btns button:nth-child(4)::after {
+  background-color: rgba(215, 44, 144, 0.4);
+}
+
+.popup__btns button:nth-child(5)::after {
+  background-color: rgba(255, 255, 255, 1);
+}
