@@ -1,7 +1,7 @@
 {
   "name": "calendar_react",
   "version": "1.0.0",
-  "description": "",
+  "description": "CalendarReact",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "x"
+    "url": "https://github.com/il421/CalendarReact"
   },
   "author": "",
   "license": "ISC"
