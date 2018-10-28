@@ -62,8 +62,11 @@ export default class Calendar extends React.Component {
   };
 
   componentDidUpdate(prevState) {
-    if (prevState.color !== this.state.color) {
+    if (this.state.color !== null) {
       this.state.day.style.backgroundColor = this.state.color;
+      this.setState({
+        color: null
+      });
     }
   };
 
@@ -80,7 +83,7 @@ export default class Calendar extends React.Component {
           onClickHandler={ this.onClickHandler }
         />
         <div className="popup">
-          { this.state.visability && (<Popup chooseColor={this.chooseColor} />) }
+          { this.state.visability && (<Popup chooseColor={ this.chooseColor } />) }
         </div>
       </div>
     )

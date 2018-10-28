@@ -8,9 +8,9 @@ const Year = (props) => {
   for (let i = 0; i < 12; i++) {
     year.push(
       <Month 
-        newMonth={i} 
-        currentYear={props.currentYear} 
-        onClickHandler={props.onClickHandler}
+        newMonth={ i } 
+        currentYear={ props.currentYear } 
+        onClickHandler={ props.onClickHandler }
       />
     );
   }

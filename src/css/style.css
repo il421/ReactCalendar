@@ -2,6 +2,38 @@
   position: relative;
 }
 
+.header__tips {
+  padding: 0 65px;
+}
+
+.header__tips div{
+  padding: 0 5px;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  user-select: none;
+}
+
+.header__tips div:nth-child(1) {
+background-color: rgba(215, 125, 44, 0.4);
+}
+
+.header__tips div:nth-child(2) {
+background-color: rgba(66, 124, 44, 0.4);
+}
+
+.header__tips div:nth-child(3) {
+background-color: rgba(66, 124, 255, 0.4);
+}
+
+.header__tips div:nth-child(4) {
+background-color: rgba(215, 44, 144, 0.4);
+}
+
+.header__tips div:nth-child(5) {
+background-color: rgba(255, 255, 255, 1);
+}
+
 .btn-arrow {
   width: 50px;
   height: 25px;
