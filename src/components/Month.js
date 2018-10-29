@@ -4,7 +4,6 @@ import dateFns from "date-fns";
 const Month = (props) => {
   const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const daysOfWeek = ['Su', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'];
-  const week = [];
 
   let currentDate = props.currentYear;
 
@@ -49,14 +48,6 @@ const Month = (props) => {
     days = [];
   }
 
-  for (let i = 0; i < 7; i++) {
-    week.push(
-      <div className="p-1" key={ i }>
-        { daysOfWeek[i] }
-      </div>
-    );
-  }
-
   return (
     <div className="col-6 col-md-4 month mb-5">
 
@@ -65,7 +56,11 @@ const Month = (props) => {
       </div>
 
       <div className="row justify-content-between days-of-week">
-        { week }
+        {
+          daysOfWeek.map((d) => {
+            return <div className="p-1" key={ d }>{ d }</div>
+          })
+        }
       </div>
 
       <div>

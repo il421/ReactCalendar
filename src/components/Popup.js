@@ -10,14 +10,6 @@ const Popup = (props) => {
     "rgba(255, 255, 255, 1)"
   ];
 
-  const specialDays = [
-    "Holiday",
-    "Birthday",
-    "Busy",
-    "Anniversary",
-    "Jusy a day"
-  ];
-
   let dayBtns = [];
 
   for (let i = 0; i < 5; i++) {
@@ -26,10 +18,10 @@ const Popup = (props) => {
         data-color={ colors[i] } 
         onClick={ (e) => props.chooseColor(e) }
       >
-        { specialDays[i] }
+        { props.specialDays[i] }
       </button>
     );
-  }
+  };
 
   return (
     <div className="popup">
@@ -37,7 +29,6 @@ const Popup = (props) => {
        { dayBtns }
       </div>
     </div>
-
     );
 };
 

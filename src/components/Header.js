@@ -20,11 +20,11 @@ const Header = (props) => {
         </div>
       </div>
       <div className="row header__tips d-flex flex-row flex-wrap justify-content-between mb-3">
-        <div data-toggle="tooltip" title="Click a day to mark it!">Holiday</div>
-        <div data-toggle="tooltip" title="Click a day to mark it!">Birthday</div>
-        <div data-toggle="tooltip" title="Click a day to mark it!">Busy</div>
-        <div data-toggle="tooltip" title="Click a day to mark it!">Anniversary</div>
-        <div data-toggle="tooltip" title="Click a day to mark it!">Jusy a day</div>
+        {
+          props.specialDays.map((d) => {
+            return <div data-toggle="tooltip" title="Click a day to mark it!" key= { d }>{ d }</div>;
+          })
+        }
       </div>
     </div>
   )

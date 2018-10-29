@@ -9,7 +9,14 @@ export default class Calendar extends React.Component {
     currentYear: new Date(),
     visability: false,
     color: null,
-    day: null
+    day: null,
+    specialDays: [
+      "Holiday",
+      "Birthday",
+      "Busy",
+      "Anniversary",
+      "Jusy a day"
+    ]
   };
 
   nextYear = () => {
@@ -77,13 +84,19 @@ export default class Calendar extends React.Component {
           currentYear={ this.state.currentYear }
           nextYear={ this.nextYear }
           prevYear={ this.prevYear }
+          specialDays={ this.state.specialDays }
         />
         <Year 
           currentYear={ this.state.currentYear } 
           onClickHandler={ this.onClickHandler }
         />
         <div className="popup">
-          { this.state.visability && (<Popup chooseColor={ this.chooseColor } />) }
+          { this.state.visability && (
+            <Popup 
+              chooseColor={ this.chooseColor }
+              specialDays={ this.state.specialDays }
+               />
+               ) }
         </div>
       </div>
     )
