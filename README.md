@@ -2,8 +2,5 @@
 
 Ilya Suglobov
 
-npm install
-
+npm install<br />
 npm run start
-
-http://localhost:8081/
